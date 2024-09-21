@@ -47,7 +47,7 @@
 
 
 :root {
-	font-size: 1.5rem;
+	font-size: 1.25rem;
 	--section-2-color: #fba;
 	color-scheme: dark;
 	--sub-fonts: .8rem;
@@ -218,7 +218,7 @@ a:active {
 }
 
 .frame-col-1	{
-	width:20px;
+	width:31px;
 	height: 180px;
 	background: var(--frame-color);
 	border-radius: 16px 0 0 16px;
@@ -256,7 +256,7 @@ a:active {
 	background-color: #78f;
 	border-left: 4px solid #000;
 	position: absolute;
-	top: 110px;
+	top: 77px;
 	right: 0;
 	z-index: 2;
 }
@@ -372,7 +372,7 @@ a:active {
 	background-color: #fba;
 	border-right: 4px solid #000;
 	position: absolute;
-	top: 110px;
+	top: 77px;
 	left: 0;
 	z-index: 2;
 }
@@ -521,6 +521,10 @@ a:active {
   }
 }
 
+/*#DeckButtons {*/
+/*	font-family: Montserrat, sans-serif;*/
+/*}*/
+
 .pillbox {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -528,6 +532,10 @@ a:active {
   margin: 25px auto;
   text-align: right;
   font-size: var(--sub-fonts);
+}
+
+.pill {
+	tabindex: 0;
 }
 
 .pill a {
@@ -647,7 +655,7 @@ a:active {
 	position: relative;
 	padding-bottom: 5px;
 	padding-left: 38px;
-	font-size: var(--sub-fonts);
+	font-size: 0.75rem;
 	color: #f70;
 }
 
@@ -659,7 +667,7 @@ a:active {
 	border-radius: 50%;
 	background-color: #f70;
 	position: absolute;
-	top: 8px;
+	top: 5px;
 	left: 0;
 }
 
@@ -737,7 +745,7 @@ a:active {
 
 .left-frame-top,
 .left-frame	{
-	width: 200px;
+	width: 160px;
 	text-align: right;
 	font-size: var(--sub-fonts);
 	font-weight: bold;

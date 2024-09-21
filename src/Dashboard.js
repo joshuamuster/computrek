@@ -34,7 +34,7 @@ class LcarsPage extends React.Component {
     this.playSound();
     console.log(`Changing to ${deckName}`);
     const deckMap = {
-      'Main Deck': DeckMain,
+      'Bridge': DeckMain,
       'Advisory': Deck00,
       'Deck 01': Deck01,
       'Deck 02': Deck02,
@@ -110,7 +110,7 @@ class LcarsPage extends React.Component {
           
           
           <div id="DeckButtons" className="pillbox">
-            {['Main Deck', 'Deck 01', 'Deck 02', 'Deck 05', 'Deck 06', 'Deck 07', 'Deck 08', 'Advisory'].map((pill, i) => (
+            {['Deck 01', 'Deck 02', 'Deck 05', 'Deck 06', 'Deck 07', 'Deck 08', 'Advisory', 'Bridge'].map((pill, i) => (
               <div key={i} className="pill">
                 <a href="#">{pill}</a>
               </div>
@@ -121,7 +121,7 @@ class LcarsPage extends React.Component {
               <li>Subspace Link: <span className="oc-almond-creme go-almond-creme">Established</span></li>
               <li>Starfleet Database: <span className="oc-almond-creme go-almond-creme">Connected</span></li>
               <li>Quantum Memory Field: <span className="oc-almond-creme go-almond-creme">Stable</span></li>
-              <li>Optical Data Network: <span className="oc-almond-creme go-almond-creme">rerouting</span></li>
+              <li>Optical Network: <span className="oc-almond-creme go-almond-creme">rerouting</span></li>
             </ul>
           </div>
           
