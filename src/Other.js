@@ -3,12 +3,12 @@ import './assets/lcars-ultra-classic.css';
 import './assets/lcars-colors.css';
 import './assets/lcars.js';
 
-const Lessons = () => {
+const Other = () => {
 	return (
 		<main>
-			<h1>Lessons</h1>
+			<h1>Other</h1>
 		</main>
 	);
 };
 
-export default Lessons;
+export default Other;

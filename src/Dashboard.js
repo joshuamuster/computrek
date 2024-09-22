@@ -15,7 +15,13 @@ import Deck05 from './Deck05';
 import Deck06 from './Deck06';
 import Deck07 from './Deck07';
 import Deck08 from './Deck08';
+import Lessons from './Lessons';
 
+import Handouts from './Handouts';
+import ActivityGuides from './ActivityGuides';
+import Slideshows from './Slideshows';
+import Rubrics from './Rubrics';
+import Other from './Other';
 import Welcome from './Welcome';
 
 class LcarsPage extends React.Component {
@@ -42,15 +48,41 @@ class LcarsPage extends React.Component {
       'Deck 06': Deck06,
       'Deck 07': Deck07,
       'Deck 08': Deck08,
+      'Lessons': Lessons,
+      'Welcome': Welcome,
     };
     this.setState({
       currentDeck: deckMap[deckName],
       currentDeckName: deckName,
     });
   };
-
+  
+  handleResourceChange = (event, resourceName) => {
+    event.preventDefault();
+    this.playSound();
+    console.log(`Opening resource: ${resourceName}`);
+    
+    // Map resource names to their corresponding components
+    const resourceMap = {
+      'Handouts': Handouts,
+      'Activity Guides': ActivityGuides,
+      'Slideshows': Slideshows,
+      'Rubrics': Rubrics,
+      'Other': Other,
+      'Welcome': Welcome,
+    };
+    
+    // Update the currentDeck state with the corresponding component
+    this.setState({
+      currentDeck: resourceMap[resourceName],
+      currentDeckName: resourceName,
+    });
+  };
+  
   componentDidMount() {
     const deckButtons = document.getElementById('DeckButtons');
+    const resourceButtons = document.getElementById('ResourceButtons');
+    
     if (deckButtons) {
       deckButtons.addEventListener('click', (event) => {
         if (event.target.tagName === 'A') {
@@ -63,16 +95,38 @@ class LcarsPage extends React.Component {
         }
       });
     }
+    
+    if (resourceButtons) {
+      resourceButtons.addEventListener('click', (event) => {
+        if (event.target.tagName === 'DIV') {
+          const resourceName = event.target.textContent.trim();
+          this.handleResourceChange(event, resourceName);
+        }
+      });
+      resourceButtons.addEventListener('touchend', (event) => {
+        if (event.target.tagName === 'DIV') {
+          const resourceName = event.target.textContent.trim();
+          this.handleResourceChange(event, resourceName);
+        }
+      });
+    }
   }
-
+  
   componentWillUnmount() {
     const deckButtons = document.getElementById('DeckButtons');
+    const resourceButtons = document.getElementById('ResourceButtons');
+    
     if (deckButtons) {
       deckButtons.removeEventListener('click', this.handleDeckChange);
       deckButtons.removeEventListener('touchend', this.handleDeckChange);
     }
+    
+    if (resourceButtons) {
+      resourceButtons.removeEventListener('click', this.handleResourceChange);
+      resourceButtons.removeEventListener('touchend', this.handleResourceChange);
+    }
   }
-
+  
   render() {
     const { currentDeck, currentDeckName } = this.state;
 
@@ -102,7 +156,7 @@ class LcarsPage extends React.Component {
           
           <div className="uppercase">
             <p>Deck Access: <span className="oc-almond-creme go-almond-creme">Connected</span></p>
-            
+          
           </div>
           
           
@@ -123,6 +177,10 @@ class LcarsPage extends React.Component {
               <li>Quantum Memory Field: <span className="oc-almond-creme go-almond-creme">Stable</span></li>
               <li>Optical Network: <span className="oc-almond-creme go-almond-creme">rerouting</span></li>
             </ul>
+          </div>
+          
+          <div className="pill" id="LessonLink">
+            <a href="#" onClick={(e) => this.handleDeckChange(e, 'Lessons')}>Lessons</a>
           </div>
           
           
@@ -152,14 +210,16 @@ class LcarsPage extends React.Component {
           </div>
           <div className="wrap" id="gap">
             <div className="left-frame">
-              <div>
-                {['Lessons', 'Handouts', 'Activity Guides', 'Slideshows', 'Rubrics', 'Other'].map((panel, i) => (
-                  <div key={i} id={`panel-${i + 3}`} className={`panel-${i + 3} resourceButton`}><span className="hop">{panel}</span></div>
+              <div id="ResourceButtons">
+                {['Handouts', 'Activity Guides', 'Slideshows', 'Rubrics', 'Other', 'Welcome'].map((panel, i) => (
+                  <div key={i} id={`panel-${i + 3}`} className={`panel-${i + 3} resourceButton`}>
+                    <span className="hop">{panel}</span>
+                  </div>
                 ))}
               </div>
-              <div>
-                <div className="panel-10">Welcome<span className="hop">-2024</span></div>
-              </div>
+              {/*<div>*/}
+              {/*  <div className="panel-10">Welcome<span className="hop">-2024</span></div>*/}
+              {/*</div>*/}
             </div>
             <div className="right-frame">
               <div className="bar-panel">
