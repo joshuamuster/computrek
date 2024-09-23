@@ -3,6 +3,48 @@
   src: url('./assets/fonts/Jefferies.ttf') format('truetype');
 }
 
+.glow-container {
+  display: inline-block;
+  position: relative;
+}
+
+.glow-container img {
+  display: block;
+  max-width: 220px; /* Adjust size as needed */
+  max-height: 220px; /* Adjust size as needed */
+  height: 100%;
+  width: 100%;
+}
+
+.glow-container::before {
+  content: '';
+  position: absolute;
+  top: 17%;
+  left: 18%;
+  width: 64%;
+  height: 64%;
+  border-radius: 50%;
+  box-shadow: 0 0 40px 10px rgba(150, 255, 255, 0.5); /* Adjust color and intensity */
+  animation: glow 1s infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 40px 10px rgba(150, 255, 255, 0.5);
+  }
+  to {
+    box-shadow: 0 0 60px 15px rgba(255, 255, 255, 1);
+  }
+}
+
+.text-purple {
+  color: #CC77FF;
+}
+.text-orange {
+  color: #f70;
+}
+
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -19,4 +61,43 @@ code {
 
 .resourceButton {
 
+}
+
+.LessonList {
+  margin-left: 30px;
+}
+
+.LessonList li {
+  color: #78f;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.LessonList span {
+  color: #fba;
+}
+
+.LessonGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.LessonGrid > div {
+  flex: 1 0 30%;
+  margin: 0 10px;
+}
+
+.LessonListChapter {
+  font-style: italic;
+  font-weight: 900;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .LessonGrid > div {
+    flex: 1 0 100%;
+  }
 }

@@ -1,6 +1,4 @@
 @charset "utf-8";
-/*import Jefferies from './fonts/Jefferies.ttf';*/
-
 /*
 
 	CSS Document
@@ -10,40 +8,6 @@
 	Modified: 2023 Sep 8
 	
 */
-
-.glow-container {
-	display: inline-block;
-	position: relative;
-}
-
-.glow-container img {
-	display: block;
-	max-width: 220px; /* Adjust size as needed */
-	max-height: 220px; /* Adjust size as needed */
-	height: 100%;
-	width: 100%;
-}
-
-.glow-container::before {
-	content: '';
-	position: absolute;
-	top: 17%;
-	left: 18%;
-	width: 64%;
-	height: 64%;
-	border-radius: 50%;
-	box-shadow: 0 0 40px 10px rgba(150, 255, 255, 0.5); /* Adjust color and intensity */
-	animation: glow 1s infinite alternate;
-}
-
-@keyframes glow {
-	from {
-		box-shadow: 0 0 40px 10px rgba(150, 255, 255, 0.5);
-	}
-	to {
-		box-shadow: 0 0 60px 15px rgba(255, 255, 255, 1);
-	}
-}
 
 
 :root {
@@ -856,10 +820,10 @@ a:active {
 }
 
 .banner	{
-	color: #f70;
+	/*color: #f70;*/
 	font-family: Jefferies;
 	font-size: 2rem;
-	padding-bottom: 25px;
+	/*padding-bottom: 25px;*/
 	padding-left: 5px;
 	text-align: right;
 	text-transform: uppercase;
@@ -1320,7 +1284,7 @@ nav a:hover {
 }
 
 .panel-3	{
-	Padding-top: 15px;
+	Padding-top: 35px;
 	padding-bottom: 15px;
 }
 
