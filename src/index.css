@@ -60,7 +60,7 @@ code {
 }
 
 .resourceButton {
-
+  cursor: pointer;
 }
 
 .LessonList {
@@ -68,7 +68,7 @@ code {
 }
 
 .LessonList li {
-  color: #78f;
+  color: #f70;
   line-height: 1.5;
   margin-bottom: 15px;
 }

@@ -3,13 +3,19 @@ import '../assets/lcars-ultra-classic.css';
 import '../assets/lcars-colors.css';
 import '../assets/lcars.js';
 
-const SubNav = ({ currentDeck }) => {
+const SubNav = ({ currentDeck, handleResourceChange }) => {
   return (
     <div className="wrap" id="gap">
       <div className="left-frame">
         <div id="ResourceButtons">
           {['Handout', 'Activity Guide', 'Slideshow', 'Grading Rubric', 'Other', 'Welcome'].map((panel, i) => (
-            <div key={i} id={`panel-${i + 3}`} className={`panel-${i + 3} resourceButton`}>
+            <div
+              key={i}
+              id={`panel-${i + 3}`}
+              className={`panel-${i + 3} resourceButton`}
+              onClick={(e) => handleResourceChange(e, panel)}
+              style={{ cursor: 'pointer' }}
+            >
               <span className="hop">{panel}</span>
             </div>
           ))}

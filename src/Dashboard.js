@@ -146,7 +146,10 @@ class LcarsPage extends React.Component {
             currentDeckName={this.state.currentDeckName}
             currentResourceName={this.state.currentResourceName}
           />
-          <SubNav currentDeck={currentDeck} />
+          <SubNav
+            currentDeck={this.state.currentDeck}
+            handleResourceChange={this.handleResourceChange}
+          />
         </section>
       </div>
     );
