@@ -37,6 +37,7 @@ class LcarsPage extends React.Component {
     const audio = new Audio(keyok2);
     audio.play();
   };
+
   playResourceSound = () => {
     const audio = new Audio(keyok1);
     audio.play();
@@ -70,7 +71,7 @@ class LcarsPage extends React.Component {
     console.log(`Opening resource: ${resourceName}`);
 
     const resourceMap = {
-      'Lessons': Lessons,
+      'Lessons': () => <Lessons resetLessonComponent={this.resetLessonComponent} />,
       'Handout': Handouts,
       'Activity Guide': ActivityGuides,
       'Slideshow': Slideshows,
@@ -82,6 +83,12 @@ class LcarsPage extends React.Component {
     this.setState({
       currentDeck: resourceMap[resourceName],
       currentResourceName: resourceName,
+    });
+  };
+
+  resetLessonComponent = () => {
+    this.setState({
+      currentDeck: () => <Lessons resetLessonComponent={this.resetLessonComponent} />,
     });
   };
 
@@ -138,7 +145,9 @@ class LcarsPage extends React.Component {
 
     return (
       <div className="wrap-everything">
-        <MainNav handleResourceChange={this.handleResourceChange} handleDeckChange={this.handleDeckChange} />
+        <MainNav
+          handleResourceChange={this.handleResourceChange} handleDeckChange={this.handleDeckChange}
+        />
         <section id="column-3" className="wrap-standard-full-width">
           <TopBar
             handleResourceChange={this.handleResourceChange}
