@@ -19,10 +19,10 @@
 .glow-container::before {
   content: '';
   position: absolute;
-  top: 17%;
+  top: 15%;
   left: 18%;
-  width: 64%;
-  height: 64%;
+  width: 63%;
+  height: 63%;
   border-radius: 50%;
   box-shadow: 0 0 40px 10px rgba(150, 255, 255, 0.5); /* Adjust color and intensity */
   animation: glow 1s infinite alternate;
@@ -43,7 +43,6 @@
 .text-orange {
   color: #f70;
 }
-
 
 body {
   margin: 0;
@@ -100,4 +99,48 @@ code {
   .LessonGrid > div {
     flex: 1 0 100%;
   }
+}
+
+
+/*Lesson Files and Stuff*/
+
+.file-preview {
+  display: inline-block;
+  margin: 10px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.file-preview img {
+  width: 100px;
+  height: 100px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  width: 80%;
+  height: 80%;
+  position: relative;
+}
+
+.modal-content .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
 }
