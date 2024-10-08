@@ -1,6 +1,6 @@
 // src/components/LessonTemplate.js
 import React from 'react';
-import '../index.css';
+import '../styles/index.css';
 
 const LessonTemplate = ({ title, content }) => {
   return (
