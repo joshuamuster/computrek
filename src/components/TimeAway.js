@@ -12,7 +12,7 @@ const TimeAway = () => {
     const updateCountdown = () => {
       const now = new Date();
       const nextHour = new Date(now.getFullYear(), now.getMonth(), now.getDate(), now.getHours() + 1, 0, 0, 0);
-      const diff = nextHour - now;
+      const diff = nextHour - now + 60000; // Add one minute (60000 milliseconds)
       const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((diff % (1000 * 60)) / 1000);
 
