@@ -17,8 +17,10 @@ const TimeAway = () => {
       const seconds = Math.floor((diff % (1000 * 60)) / 1000);
 
       if (diff <= 60000) {
+        // Show MM:SS format when less than or equal to one minute
         setCountdown(`${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`);
       } else {
+        // Show HH:MM format otherwise
         const hours = Math.floor(diff / (1000 * 60 * 60));
         setCountdown(`${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}`);
       }
