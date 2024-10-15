@@ -18,9 +18,9 @@ import Deck08 from './Deck08';
 import Lessons from './Lessons';
 import Handouts from './Handouts';
 import ActivityGuides from './ActivityGuides';
-import Slideshows from './Slideshows';
+import SlideDeck from './Slideshows';
 import Rubrics from './Rubrics';
-import Other from './Other';
+import AdditionalResources from './AdditionalResources';
 import Welcome from './Welcome';
 import MainNav from './components/main-nav';
 import TopBar from './components/top-bar';
@@ -74,9 +74,9 @@ class LcarsPage extends React.Component {
       'Lessons': () => <Lessons resetLessonComponent={this.resetLessonComponent} />,
       'Handout': Handouts,
       'Activity Guide': ActivityGuides,
-      'Slideshow': Slideshows,
+      'Slide Deck': SlideDeck,
       'Grading Rubric': Rubrics,
-      'Other': Other,
+      'Additional Resources': AdditionalResources,
       'Welcome': Welcome,
     };
 
