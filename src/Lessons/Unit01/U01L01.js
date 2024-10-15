@@ -1,12 +1,12 @@
-// src/Lessons/Unit01/U01L01/U01L01.js
 import React from 'react';
 import LessonTemplate from '../../components/LessonTemplate';
 import '../../index.css';
 import { Modal } from 'react-bootstrap';
 import '../../styles/modal.css';
 // import 'bootstrap/dist/css/bootstrap.min.css';
-import ThumbnailActivity from '../../assets/img/Thumbnail-ActivityGuide-min.jpg';
-import ThumbnailSlideshow from '../../assets/img/Thumbnail-Slideshow-min.jpg';
+import ThumbnailActivity from '../../assets/img/Thumbnail-ActivityGuide.jpg';
+import ThumbnailSlideshow from '../../assets/img/Thumbnail-Slideshow.jpg';
+import ActivityGuide from './U01L01/U01_L01-ActivityGuide.pdf'; // Corrected path
 
 const U01L01content = () => {
   const [showActivityModal, setShowActivityModal] = React.useState(false);
@@ -26,28 +26,30 @@ const U01L01content = () => {
            alt="Lesson Thumbnail"/>
       <img className="lessonThumbnail" onClick={handleShowSlideshowModal} src={ThumbnailSlideshow}
            alt="Lesson Thumbnail"/>
-      
-      
-      {/*<button onClick={handleShow}>Open Modal</button>*/}
-      
-      <Modal show={showActivityModal} onHide={handleCloseActivityModal}>
-        <Modal.Header closeButton />
-        <Modal.Body>Activity Modal Content</Modal.Body>
-        <Modal.Footer />
+
+      <Modal show={showActivityModal} onHide={handleCloseActivityModal} size="lg" centered>
+        {/*<Modal.Header closeButton />*/}
+        <Modal.Body style={{ width: '100%', height: '80vh' }}>
+          <iframe src={ActivityGuide} width="100%" height="100%" title="PDF"></iframe>
+        </Modal.Body>
+        {/*<Modal.Footer />*/}
       </Modal>
-      
-      <Modal show={showSlideshowModal} onHide={handleCloseSlideshowModal}>
-        <Modal.Header closeButton>
-          <Modal.Title>Slideshow Modal Title</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>Slideshow Modal Content</Modal.Body>
-        <Modal.Footer>
-          {/* ... rest of your code */}
-        </Modal.Footer>
+
+      <Modal show={showSlideshowModal} onHide={handleCloseSlideshowModal} size="lg" centered>
+        {/*<Modal.Header closeButton>*/}
+        {/*  <Modal.Title>Slideshow Modal Title</Modal.Title>*/}
+        {/*</Modal.Header>*/}
+        <Modal.Body style={{ width: '90vw', height: '90vh' }}>
+          <iframe
+            src="https://docs.google.com/presentation/d/e/2PACX-1vQwJ0G0J0G0J0G0J0G0J0G0J0G0J0G0J0G0J0G0J0G0J0G0J0G0J0G0J0G0J0G0J0G0G0G0J0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0G0" />
+        </Modal.Body>
+        {/*<Modal.Footer>*/}
+        {/*  /!* ... rest of your code *!/*/}
+        {/*</Modal.Footer>*/}
       </Modal>
     </div>
   );
-  
+
   return <LessonTemplate title={title} content={content}/>;
 };
 

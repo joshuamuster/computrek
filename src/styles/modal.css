@@ -162,7 +162,8 @@
 @media (min-width: 992px) {
 	.modal-lg,
 	.modal-xl {
-		--bs-modal-width: 800px;
+		/*--bs-modal-width: 800px;*/
+		--bs-modal-width: 95%;
 	}
 }
 @media (min-width: 1200px) {
