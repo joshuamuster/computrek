@@ -65,26 +65,26 @@ class LcarsPage extends React.Component {
     });
   };
 
-  handleResourceChange = (event, resourceName) => {
-    event.preventDefault();
-    this.playResourceSound();
-    console.log(`Opening resource: ${resourceName}`);
+  handleResourceChange = (event, resourceName, lessonName = '') => {
+  event.preventDefault();
+  this.playResourceSound();
+  console.log(`Opening resource: ${resourceName} for lesson: ${lessonName}`);
 
-    const resourceMap = {
-      'Lessons': () => <Lessons resetLessonComponent={this.resetLessonComponent} />,
-      'Handout': Handouts,
-      'Activity Guide': ActivityGuides,
-      'Slide Deck': SlideDeck,
-      'Grading Rubric': Rubrics,
-      'Additional Resources': AdditionalResources,
-      'Welcome': Welcome,
-    };
-
-    this.setState({
-      currentDeck: resourceMap[resourceName],
-      currentResourceName: resourceName,
-    });
+  const resourceMap = {
+    'Lessons': () => <Lessons resetLessonComponent={this.resetLessonComponent} />,
+    'Handout': Handouts,
+    'Activity Guide': () => <ActivityGuides lessonName={lessonName} />,
+    'Slide Deck': SlideDeck,
+    'Grading Rubric': Rubrics,
+    'Additional Resources': AdditionalResources,
+    'Welcome': Welcome,
   };
+
+  this.setState({
+    currentDeck: resourceMap[resourceName],
+    currentResourceName: resourceName,
+  });
+};
 
   resetLessonComponent = () => {
     this.setState({

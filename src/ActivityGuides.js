@@ -6,14 +6,18 @@ import './assets/lcars.js';
 import ThumbnailActivity from './assets/img/Thumbnail-ActivityGuide.jpg';
 import ThumbnailSlideshow from './assets/img/Thumbnail-Slideshow.jpg';
 
-const ActivityGuides = () => {
-	return (
-		<main>
-			<h1>Activity Guides</h1>
-			<img className="lessonThumbnail" src={ThumbnailActivity} alt="Lesson Thumbnail"/>
-			<img className="lessonThumbnail" src={ThumbnailSlideshow} alt="Lesson Thumbnail"/>
-		</main>
-	);
+const ActivityGuides = ({ lessonName }) => {
+  const activityGuides = {
+    'Lesson 01 - Intro to Problem Solving': 'All the content for Lesson 01 Activity Guide',
+    // Add other lessons and their content here
+  };
+
+  return (
+    <div>
+      <h1>Activity Guide</h1>
+      <p>{activityGuides[lessonName]}</p>
+    </div>
+  );
 };
 
 export default ActivityGuides;

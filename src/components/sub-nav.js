@@ -4,6 +4,8 @@ import '../assets/lcars-colors.css';
 import '../assets/lcars.js';
 
 const SubNav = ({ currentDeck, handleResourceChange }) => {
+  const lessonName = 'Lesson 01 - Intro to Problem Solving'; // This should be dynamically set based on the selected lesson
+
   return (
     <div className="wrap" id="gap">
       <div className="left-frame">
@@ -13,7 +15,7 @@ const SubNav = ({ currentDeck, handleResourceChange }) => {
               key={i}
               id={`panel-${i + 3}`}
               className={`panel-${i + 3} resourceButton`}
-              onClick={(e) => handleResourceChange(e, panel)}
+              onClick={(e) => handleResourceChange(e, panel, lessonName)}
               style={{ cursor: 'pointer' }}
             >
               <span className="hop">{panel}</span>
