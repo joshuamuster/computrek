@@ -4,7 +4,7 @@ import LessonTemplate from '../../components/LessonTemplate';
 
 const U01L01content = () => {
   const title = "Unit 02 - Lesson 01";
-  const content = "Links to Files and Resources for Unit 01 Lesson 01 will go here!!!";
+  const content = "Links to Files and Resources for Unit 02 Lesson 01 will go here!!!";
 
   return <LessonTemplate title={title} content={content} />;
 };

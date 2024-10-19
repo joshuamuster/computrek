@@ -15,10 +15,8 @@ const TopBar = ({ handleResourceChange, currentDeckName, currentResourceName }) 
         </div>
         <div className="right-frame-top">
           <div className="columns-container">
-            
-            <div className="right-column">
-              <div className="banner go-ice">{currentDeckName} • <span className="blink go-galaxy">Active</span>
-              </div>
+            <div className="right-row">
+              <div className="banner go-ice">{currentDeckName} • <span className="blink go-galaxy">Active</span></div>
               <h1 className="go-tomato" style={{margin: 0}}>{currentResourceName || 'Resource Index'}</h1>
             </div>
           </div>

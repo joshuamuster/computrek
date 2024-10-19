@@ -86,6 +86,14 @@ code {
   align-items: flex-start; /* Vertically aligns the items */
 }
 
+.right-row {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 50px;
+  width: 100%;
+}
+
 .right-column {
   align-items: flex-end;
   display: inline-flex;

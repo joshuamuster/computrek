@@ -711,7 +711,7 @@ a:active {
 
 .left-frame-top,
 .left-frame	{
-	width: 160px;
+	width: 140px;
 	text-align: right;
 	font-size: var(--sub-fonts);
 	font-weight: bold;
@@ -1430,7 +1430,7 @@ article > *:first-child {
 	margin-top: 0;
 }
 
-h1, h2, h3	{
+h1, h2, h3 {
 	margin-top: 1.15rem;
 	margin-bottom: 1rem;
 	font-weight: normal;
@@ -1438,24 +1438,24 @@ h1, h2, h3	{
 	text-transform: uppercase;
 }
 
-h1	{
-	font-size: clamp(2rem, 1.04rem + 3.84vw, 3.2rem);
+h1 {
+	font-size: clamp(1.75rem, 0.79rem + 3.59vw, 2.95rem);
 	text-align: right;
 }
 
-h2	{
-	font-size: clamp(1.6rem, 1.04rem + 2.24vw, 2.3rem);
+h2 {
+	font-size: clamp(1.35rem, 0.79rem + 1.99vw, 2.05rem);
 }
 
 h3 {
-	font-size: clamp(1.4rem, 1.08rem + 1.28vw, 1.8rem);
+	font-size: clamp(1.15rem, 0.83rem + 1.03vw, 1.55rem);
 }
 
 p {
 	margin-block: 1rem;
 }
 
-.caption	{
+.caption {
 	margin-top: .5rem;
 	text-align: center;
 	font-size: var(--sub-fonts);
@@ -1468,10 +1468,11 @@ p {
 .postmeta {
 	margin: .25rem 0 1.25rem 0;
 	text-align: right;
-	font-size: clamp(1.2rem, 0.88rem + 1.28vw, 1.6rem);
+	font-size: clamp(0.95rem, 0.63rem + 1.03vw, 1.35rem);
 	line-height: 1.2;
 	text-transform: uppercase;
 }
+
 
 article h1 {
 	margin-bottom: 0;

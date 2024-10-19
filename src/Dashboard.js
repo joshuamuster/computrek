@@ -16,7 +16,7 @@ class Dashboard extends React.Component {
     super(props);
     this.state = {
       currentDeck: DeckMain,
-      currentDeckName: 'DeckMain',
+      currentDeckName: 'CompuTrek',
       currentResourceName: '',
     };
   }
