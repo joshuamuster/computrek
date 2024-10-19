@@ -3,7 +3,7 @@ import '../assets/lcars-ultra-classic.css';
 import '../assets/lcars-colors.css';
 import '../assets/lcars.js';
 
-const TopBar = ({ handleResourceChange, handleDeckChange, currentDeckName, currentResourceName }) => {
+const TopBar = ({ handleResourceChange, currentDeckName, currentResourceName }) => {
   
 
   return (

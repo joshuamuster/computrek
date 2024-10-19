@@ -5,6 +5,8 @@ import '../assets/lcars.js';
 
 const SubNav = ({ currentDeck, handleResourceChange }) => {
   return (
+    // start of the sub-nav
+    
     <div className="wrap" id="gap">
       <div className="left-frame">
         <div id="ResourceButtons">

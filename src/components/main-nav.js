@@ -5,7 +5,7 @@ import '../assets/lcars.js';
 import AllianceLogoGlowing from '../assets/img/FederationLogo-Glow-min.png';
 import TimeAway from './TimeAway';
 
-const MainNav = ({ handleResourceChange, handleDeckChange }) => {
+const MainNav = ({ handleResourceChange }) => {
   return (
     <section id="column-1">
       <div className="lcars-frame">
