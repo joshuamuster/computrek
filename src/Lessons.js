@@ -9,12 +9,15 @@ const Lessons = () => {
   const [LessonComponent, setLessonComponent] = useState(null);
 
   const handleLessonClick = async (event) => {
-    const lessonId = event.currentTarget.id;
-    const unitId = event.currentTarget.parentElement.id;
-    const lessonModule = await import(`./Lessons/${unitId}/${lessonId}.js`);
-    setLessonComponent(() => lessonModule.default);
-    console.log(`Loaded lesson: ${unitId}/${lessonId}`, lessonModule.default);
-  };
+  const lessonId = event.currentTarget.id;
+  const unitId = event.currentTarget.parentElement.id;
+  const lessonModule = await import(`./Lessons/${unitId}/${lessonId}.js`);
+  setLessonComponent(() => lessonModule.default);
+  console.log(`Loaded lesson: ${unitId}/${lessonId}`, lessonModule.default);
+  
+  // Update the URL hash
+  window.location.hash = lessonId;
+};
 
   return (
     <main>
@@ -31,6 +34,7 @@ const Lessons = () => {
                   key={lesson.id}
                   id={lesson.id}
                   title={lesson.title}
+                  subtitle={lesson.subtitle}
                   onClick={handleLessonClick}
                 />
               ))}
@@ -45,6 +49,7 @@ const Lessons = () => {
                   key={lesson.id}
                   id={lesson.id}
                   title={lesson.title}
+                  subtitle={lesson.subtitle}
                   onClick={handleLessonClick}
                 />
               ))}
@@ -59,6 +64,7 @@ const Lessons = () => {
                   key={lesson.id}
                   id={lesson.id}
                   title={lesson.title}
+                  subtitle={lesson.subtitle}
                   onClick={handleLessonClick}
                 />
               ))}

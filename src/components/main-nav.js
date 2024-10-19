@@ -6,6 +6,11 @@ import AllianceLogoGlowing from '../assets/img/FederationLogo-Glow-min.png';
 import TimeAway from './TimeAway';
 
 const MainNav = ({ handleResourceChange }) => {
+  const handleLessonsClick = (e) => {
+    handleResourceChange(e, 'Lessons');
+    window.location.hash = ''; // Clear the URL hash
+  };
+
   return (
     <section id="column-1">
       <div className="lcars-frame">
@@ -33,7 +38,7 @@ const MainNav = ({ handleResourceChange }) => {
       </div>
       
       <div className="pill" id="LessonLink">
-        <a href="#" onClick={(e) => handleResourceChange(e, 'Lessons')}>Lessons</a>
+        <a href="#" onClick={handleLessonsClick}>Lessons</a>
       </div>
       
       <div className="lcars-frame" style={{ marginTop: '20px' }}>
@@ -54,8 +59,6 @@ const MainNav = ({ handleResourceChange }) => {
         </div>
       </div>
       
-      
-      
       <div id="DeckButtons" className="pillbox">
         {['Deck 01', 'Deck 02', 'Deck 05', 'Deck 06', 'Deck 07', 'Deck 08', 'Advisory', 'Bridge'].map((pill, i) => (
           <div key={i} className="pill">
@@ -71,7 +74,6 @@ const MainNav = ({ handleResourceChange }) => {
           <li>Optical Network: <span className="oc-almond-creme go-almond-creme">rerouting</span></li>
         </ul>
       </div>
-    
     </section>
   );
 };
