@@ -4,9 +4,12 @@ import '../assets/lcars-colors.css';
 import '../assets/lcars.js';
 import AllianceLogoGlowing from '../assets/img/FederationLogo-Glow-min.png';
 import TimeAway from './TimeAway';
+import { playKeyOk02, playButtonSound02, playAlertSound, playNotificationSound } from '../soundEffects';
+
 
 const MainNav = ({ handleResourceChange }) => {
   const handleLessonsClick = (e) => {
+    playKeyOk02(); // Call the sound function
     handleResourceChange(e, 'Lessons');
     window.location.hash = ''; // Clear the URL hash
   };

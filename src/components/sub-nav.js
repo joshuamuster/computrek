@@ -2,11 +2,15 @@ import React from 'react';
 import '../assets/lcars-ultra-classic.css';
 import '../assets/lcars-colors.css';
 import '../assets/lcars.js';
+import {playButtonSound01} from '../soundEffects';
 
 const SubNav = ({ currentDeck, handleResourceChange }) => {
+  const handleClick = (e, panel) => {
+    playButtonSound01(); // Play the sound
+    handleResourceChange(e, panel); // Call the passed handleResourceChange handler
+  };
+
   return (
-    // start of the sub-nav
-    
     <div className="wrap" id="gap">
       <div className="left-frame">
         <div id="ResourceButtons">
@@ -15,7 +19,7 @@ const SubNav = ({ currentDeck, handleResourceChange }) => {
               key={i}
               id={`panel-${i + 3}`}
               className={`panel-${i + 3} resourceButton`}
-              onClick={(e) => handleResourceChange(e, panel)}
+              onClick={(e) => handleClick(e, panel)}
               style={{ cursor: 'pointer' }}
             >
               <span className="hop">{panel}</span>
