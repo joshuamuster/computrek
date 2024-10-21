@@ -7,11 +7,17 @@ import TimeAway from './TimeAway';
 import { playKeyOk02, playButtonSound02, playAlertSound, playNotificationSound } from '../soundEffects';
 
 
-const MainNav = ({ handleResourceChange }) => {
+// src/components/main-nav.js
+const MainNav = ({ handleResourceChange, handleDeckChange }) => {
   const handleLessonsClick = (e) => {
     playKeyOk02(); // Call the sound function
     handleResourceChange(e, 'Lessons');
     window.location.hash = ''; // Clear the URL hash
+  };
+
+  const handleDeckClick = (e, deckName) => {
+    playButtonSound02(); // Play the sound
+    handleDeckChange(deckName); // Update the deck name in the top bar
   };
 
   return (
@@ -35,15 +41,15 @@ const MainNav = ({ handleResourceChange }) => {
           <div className="frame-col-5-cell-c"></div>
         </div>
       </div>
-      
+
       <div className="uppercase">
         <p>Deck Access: <span className="oc-almond-creme go-almond-creme">Connected</span></p>
       </div>
-      
+
       <div className="pill" id="LessonLink">
         <a href="#" onClick={handleLessonsClick}>Lessons</a>
       </div>
-      
+
       <div className="lcars-frame" style={{ marginTop: '20px' }}>
         <div className="frame-col-1">
           <div className="frame-col-1-cell-a"></div>
@@ -61,11 +67,11 @@ const MainNav = ({ handleResourceChange }) => {
           <div className="frame-col-5-cell-c"></div>
         </div>
       </div>
-      
+
       <div id="DeckButtons" className="pillbox">
         {['Deck 01', 'Deck 02', 'Deck 05', 'Deck 06', 'Deck 07', 'Deck 08', 'Advisory', 'Bridge'].map((pill, i) => (
           <div key={i} className="pill">
-            <a href="#">{pill}</a>
+            <a href="#" onClick={(e) => handleDeckClick(e, pill)}>{pill}</a>
           </div>
         ))}
       </div>

@@ -11,6 +11,7 @@ import MainNav from './components/main-nav';
 import TopBar from './components/top-bar';
 import SubNav from './components/sub-nav';
 
+// src/Dashboard.js
 class Dashboard extends React.Component {
   constructor(props) {
     super(props);
@@ -38,6 +39,12 @@ class Dashboard extends React.Component {
     this.setState({
       currentDeck: resourceMap[resourceName],
       currentResourceName: resourceName,
+    });
+  };
+
+  handleDeckChange = (deckName) => {
+    this.setState({
+      currentDeckName: deckName,
     });
   };
 
@@ -80,7 +87,7 @@ class Dashboard extends React.Component {
 
     return (
       <div className="wrap-everything">
-        <MainNav handleResourceChange={this.handleResourceChange} />
+        <MainNav handleResourceChange={this.handleResourceChange} handleDeckChange={this.handleDeckChange} />
         <section id="column-3" className="wrap-standard-full-width">
           <TopBar
             handleResourceChange={this.handleResourceChange}
