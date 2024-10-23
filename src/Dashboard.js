@@ -1,7 +1,6 @@
 import React from 'react';
 import DeckMain from './DeckMain';
 import Lessons from './Lessons';
-import Handouts from './Handouts';
 import ActivityGuides from './ActivityGuides';
 import Slideshows from './Slideshows';
 import Rubrics from './Rubrics';
@@ -18,17 +17,16 @@ class Dashboard extends React.Component {
     this.state = {
       currentDeck: DeckMain,
       currentDeckName: 'CompuTrek',
-      currentResourceName: '',
+      currentLesson: 'Lesson?',
     };
   }
 
-  handleResourceChange = (event, resourceName) => {
+  handleResourceChange = (event, resourceName, specificName = '') => {
     event.preventDefault();
     console.log(`Opening resource: ${resourceName}`);
 
     const resourceMap = {
       'Lessons': () => <Lessons resetLessonComponent={this.resetLessonComponent} />,
-      'Handout': Handouts,
       'Activity Guide': ActivityGuides,
       'Slideshow': Slideshows,
       'Grading Rubric': Rubrics,
@@ -38,7 +36,7 @@ class Dashboard extends React.Component {
 
     this.setState({
       currentDeck: resourceMap[resourceName],
-      currentResourceName: resourceName,
+      currentLesson: specificName || resourceName,
     });
   };
 
@@ -83,7 +81,7 @@ class Dashboard extends React.Component {
   }
 
   render() {
-    const { currentDeck, currentDeckName, currentResourceName } = this.state;
+    const { currentDeck, currentDeckName, currentLesson } = this.state;
 
     return (
       <div className="wrap-everything">
@@ -92,7 +90,7 @@ class Dashboard extends React.Component {
           <TopBar
             handleResourceChange={this.handleResourceChange}
             currentDeckName={currentDeckName}
-            currentResourceName={currentResourceName}
+            currentLesson={currentLesson}
           />
           <SubNav
             currentDeck={currentDeck}
