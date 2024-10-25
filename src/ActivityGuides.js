@@ -2,7 +2,6 @@ import React from 'react';
 import './assets/lcars-ultra-classic.css';
 import './assets/lcars-colors.css';
 import './assets/lcars.js';
-import ErrorsMessage from './Error';
 import ErrorMessage from "./Error";
 
 const ActivityGuides = () => {
