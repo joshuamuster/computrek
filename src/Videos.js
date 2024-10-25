@@ -4,7 +4,7 @@ import './assets/lcars-colors.css';
 import './assets/lcars.js';
 import ErrorMessage from "./Error";
 
-const Rubrics = () => {
+const Videos = () => {
 	const lessonId = window.location.hash.substring(1); // Get the lesson ID from the URL hash
 	
 	if (!lessonId) {
@@ -31,4 +31,4 @@ const Rubrics = () => {
 	);
 };
 
-export default Rubrics;
+export default Videos;

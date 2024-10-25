@@ -3,8 +3,8 @@ import DeckMain from './DeckMain';
 import Lessons from './Lessons';
 import ActivityGuides from './ActivityGuides';
 import Slideshows from './Slideshows';
-import Rubrics from './Rubrics';
 import Other from './Other';
+import Videos from './Videos';
 import Welcome from './Welcome';
 import MainNav from './components/main-nav';
 import TopBar from './components/top-bar';
@@ -29,8 +29,8 @@ class Dashboard extends React.Component {
       'Lessons': () => <Lessons resetLessonComponent={this.resetLessonComponent} />,
       'Activity Guide': ActivityGuides,
       'Slideshow': Slideshows,
-      'Grading Rubric': Rubrics,
       'Other': Other,
+      'Videos': Videos,
       'Welcome': Welcome,
     };
 
