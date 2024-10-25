@@ -3,12 +3,12 @@ import './assets/lcars-ultra-classic.css';
 import './assets/lcars-colors.css';
 import './assets/lcars.js';
 
-const Rubrics = () => {
+const Videos = () => {
 	return (
 		<main>
-			<h1>Rubrics</h1>
+			<h1>Videos</h1>
 		</main>
 	);
 };
 
-export default Rubrics;
+export default Videos;

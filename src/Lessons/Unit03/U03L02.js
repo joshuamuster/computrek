@@ -1,6 +1,6 @@
 // src/Lessons/Unit01/U01L01/U01L01.js
 import React from 'react';
-import LessonTemplate from '../../components/LessonTemplate';
+import LessonTemplate from '../LessonTemplate';
 
 const U02L02content = () => {
   const title = "Unit 03 - Lesson 02";

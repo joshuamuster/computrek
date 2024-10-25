@@ -4,8 +4,8 @@ import Lessons from './Lessons';
 import Handouts from './Handouts';
 import ActivityGuides from './ActivityGuides';
 import Slideshows from './Slideshows';
-import Rubrics from './Rubrics';
 import Other from './Other';
+import Videos from './Videos';
 import Welcome from './Welcome';
 import MainNav from './components/main-nav';
 import TopBar from './components/top-bar';
@@ -30,7 +30,7 @@ class Dashboard extends React.Component {
       'Handout': Handouts,
       'Activity Guide': ActivityGuides,
       'Slideshow': Slideshows,
-      'Grading Rubric': Rubrics,
+      'Videos': Videos,
       'Other': Other,
       'Welcome': Welcome,
     };
