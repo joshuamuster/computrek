@@ -1,6 +1,6 @@
 // src/components/LessonItem.js
 import React from 'react';
-import '../index.css';
+import '../styles/index.css';
 import { playKeyOk03 } from '../soundEffects';
 
 const LessonItem = ({ id, title, project, subtitle, onClick }) => {

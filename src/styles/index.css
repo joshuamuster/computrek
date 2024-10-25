@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Jefferies';
-  src: url('./assets/fonts/Jefferies.ttf') format('truetype');
+  src: url('../assets/fonts/Jefferies.ttf') format('truetype');
 }
 
 .glow-container {

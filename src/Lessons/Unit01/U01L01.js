@@ -2,7 +2,7 @@
 import React from 'react';
 import LessonTemplate from '../LessonTemplate';
 import { Unit01Array } from '../../components/LessonArray';
-import '../../index.css';
+import '../../styles/index.css';
 
 const U01L01content = () => {
   const lessonId = 'U01L01';

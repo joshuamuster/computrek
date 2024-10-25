@@ -44,7 +44,7 @@ const MainNav = ({ handleResourceChange }) => {
         <a href="#" onClick={handleLessonsClick}>Lessons</a>
       </div>
       
-      <div className="lcars-frame" style={{ marginTop: '20px' }}>
+      <div className="lcars-frame" style={{marginTop: '20px'}}>
         <div className="frame-col-1">
           <div className="frame-col-1-cell-a"></div>
           <div className="frame-col-1-cell-b"></div>
@@ -62,13 +62,30 @@ const MainNav = ({ handleResourceChange }) => {
         </div>
       </div>
       
-      <div id="DeckButtons" className="pillbox">
-        {['Deck 01', 'Deck 02', 'Deck 05', 'Deck 06', 'Deck 07', 'Deck 08', 'Advisory', 'Bridge'].map((pill, i) => (
-          <div key={i} className="pill">
-            <a href="#">{pill}</a>
-          </div>
-        ))}
+      <br/>
+      <div className="pill" style={{marginBottom: '20px'}} id="LessonLink"><a href="#" onClick={handleLessonsClick}>CONVERSATION LEVEL</a>
       </div>
+      <div className="pill" style={{marginBottom: '20px'}} id="LessonLink"><a href="#" onClick={handleLessonsClick}>HELP</a>
+      </div>
+      <div className="pill" style={{marginBottom: '20px'}} id="LessonLink"><a href="#" onClick={handleLessonsClick}>ACTIVITY</a>
+      </div>
+      <div className="pill" style={{marginBottom: '20px'}} id="LessonLink"><a href="#" onClick={handleLessonsClick}>MOVEMENT</a>
+      </div>
+      <div className="pill" style={{marginBottom: '20px'}} id="LessonLink"><a href="#" onClick={handleLessonsClick}>PARTICIPATION</a>
+      </div>
+      <div className="pill" style={{marginBottom: '20px'}} id="LessonLink"><a href="#" onClick={handleLessonsClick}>SUCCESS</a>
+      </div>
+      
+      {/*<div id="DeckButtons" className="pillbox">*/}
+      {/*  {['Deck 01', 'Deck 02', 'Deck 05', 'Deck 06', 'Deck 07', 'Deck 08', 'Advisory', 'Bridge'].map((pill, i) => (*/}
+      {/*    <div key={i} className="pill">*/}
+      {/*      <a href="#">{pill}</a>*/}
+      {/*    </div>*/}
+      {/*  ))}*/}
+      {/*</div>*/}
+      
+      {/*connections*/}
+      
       <div className="lcars-list-2 uppercase">
         <ul>
           <li>Subspace Link: <span className="oc-almond-creme go-almond-creme">Established</span></li>

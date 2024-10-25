@@ -14,7 +14,7 @@ const SubNav = ({ currentDeck, handleResourceChange }) => {
     <div className="wrap" id="gap">
       <div className="left-frame">
         <div id="ResourceButtons">
-          {['Handout', 'Activity Guide', 'Slideshow', 'Videos', 'Other', 'Welcome'].map((panel, i) => (
+          {['Handout', 'Activity Guide', 'Slideshow', 'Code Studio', 'Videos', 'Other', 'Welcome'].map((panel, i) => (
             <div
               key={i}
               id={`panel-${i + 3}`}

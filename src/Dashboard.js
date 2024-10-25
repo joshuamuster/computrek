@@ -1,12 +1,15 @@
 import React from 'react';
-import DeckMain from './DeckMain';
+import Main from './Main';
 import Lessons from './Lessons';
+
 import Handouts from './Handouts';
 import ActivityGuides from './ActivityGuides';
 import Slideshows from './Slideshows';
-import Other from './Other';
+import CodeStudio from './CodeStudio';
 import Videos from './Videos';
+import Other from './Other';
 import Welcome from './Welcome';
+
 import MainNav from './components/main-nav';
 import TopBar from './components/top-bar';
 import SubNav from './components/sub-nav';
@@ -15,7 +18,7 @@ class Dashboard extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentDeck: DeckMain,
+      currentDeck: Main,
       currentDeckName: 'CompuTrek',
       currentResourceName: '',
     };
@@ -30,6 +33,7 @@ class Dashboard extends React.Component {
       'Handout': Handouts,
       'Activity Guide': ActivityGuides,
       'Slideshow': Slideshows,
+      'Code Studio': CodeStudio,
       'Videos': Videos,
       'Other': Other,
       'Welcome': Welcome,

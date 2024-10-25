@@ -3,7 +3,7 @@ import './assets/lcars-ultra-classic.css';
 import './assets/lcars-colors.css';
 import './assets/lcars.js';
 
-const DeckMain = () => {
+const Main = () => {
 	return (
 		<main>
 			<h1 className="">Welcome Aboard • <span className="go-tomato">C.S.S. Odyssey</span></h1>
@@ -22,4 +22,4 @@ const DeckMain = () => {
 	);
 };
 
-export default DeckMain;
+export default Main;
