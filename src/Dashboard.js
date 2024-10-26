@@ -51,6 +51,13 @@ class Dashboard extends React.Component {
     });
   };
 
+  resetMainContent = () => {
+    this.setState({
+      currentDeck: Main,
+      currentResourceName: '',
+    });
+  };
+
   componentDidMount() {
     const resourceButtons = document.getElementById('ResourceButtons');
 
@@ -84,7 +91,7 @@ class Dashboard extends React.Component {
 
     return (
       <div className="wrap-everything">
-        <MainNav handleResourceChange={this.handleResourceChange} />
+        <MainNav handleResourceChange={this.handleResourceChange} resetMainContent={this.resetMainContent} />
         <section id="column-3" className="wrap-standard-full-width">
           <TopBar
             handleResourceChange={this.handleResourceChange}

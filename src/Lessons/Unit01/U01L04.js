@@ -1,15 +1,16 @@
-// src/components/LessonTemplate.js
+// src/Lessons/Unit01/U01L01/U01L01.js
 import React from 'react';
+import LessonTemplate from '../LessonTemplate';
+import { Unit01Array } from '../../components/LessonArray';
+import '../../styles/index.css';
 
-const U1L04content = ({ title, content }) => {
-	return (
-		<div className="lesson-page">
-			<h1>Unit 01 - Lesson 04</h1>
-			<div className="lesson-content">
-				Links to Files and Resources for Unit 01 Lesson 04 will go here.
-			</div>
-		</div>
-	);
+const U01L04content = () => {
+	const lessonId = 'U01L04';
+	const lesson = Unit01Array.find(lesson => lesson.id === lessonId);
+	const title = lesson ? lesson.title : 'Lesson not found';
+	const content = "Links to Files and Resources for Unit 01 Lesson 04 will go here!!!";
+	
+	return <LessonTemplate title={title} content={content} />;
 };
 
-export default U1L04content;
+export default U01L04content;

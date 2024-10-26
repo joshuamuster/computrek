@@ -7,7 +7,7 @@ import TimeAway from './TimeAway';
 import { playKeyOk02, playButtonSound02, playAlertSound, playNotificationSound } from '../soundEffects';
 
 
-const MainNav = ({ handleResourceChange }) => {
+const MainNav = ({ handleResourceChange, resetMainContent }) => {
   const handleLessonsClick = (e) => {
     playKeyOk02(); // Call the sound function
     handleResourceChange(e, 'Lessons');
@@ -24,7 +24,7 @@ const MainNav = ({ handleResourceChange }) => {
         </div>
         <div className="frame-col-2"></div>
         <div className="frame-col-3 display-vertical">
-          <div className="glow-container">
+          <div className="glow-container" onClick={resetMainContent}>
             <img id="AllianceLogo" src={AllianceLogoGlowing} alt="CompuTrek Logo"/>
           </div>
         </div>
@@ -35,15 +35,15 @@ const MainNav = ({ handleResourceChange }) => {
           <div className="frame-col-5-cell-c"></div>
         </div>
       </div>
-      
+
       <div className="uppercase">
         <p>Deck Access: <span className="oc-almond-creme go-almond-creme">Connected</span></p>
       </div>
-      
+
       <div className="pill" id="LessonLink">
         <a href="#" onClick={handleLessonsClick}>Lessons</a>
       </div>
-      
+
       <div className="lcars-frame" style={{marginTop: '20px'}}>
         <div className="frame-col-1">
           <div className="frame-col-1-cell-a"></div>
@@ -61,7 +61,7 @@ const MainNav = ({ handleResourceChange }) => {
           <div className="frame-col-5-cell-c"></div>
         </div>
       </div>
-      
+
       <br/>
       <div className="pill" style={{marginBottom: '20px'}} id="LessonLink"><a href="#" onClick={handleLessonsClick}>CONVERSATION LEVEL</a>
       </div>
@@ -75,17 +75,7 @@ const MainNav = ({ handleResourceChange }) => {
       </div>
       <div className="pill" style={{marginBottom: '20px'}} id="LessonLink"><a href="#" onClick={handleLessonsClick}>SUCCESS</a>
       </div>
-      
-      {/*<div id="DeckButtons" className="pillbox">*/}
-      {/*  {['Deck 01', 'Deck 02', 'Deck 05', 'Deck 06', 'Deck 07', 'Deck 08', 'Advisory', 'Bridge'].map((pill, i) => (*/}
-      {/*    <div key={i} className="pill">*/}
-      {/*      <a href="#">{pill}</a>*/}
-      {/*    </div>*/}
-      {/*  ))}*/}
-      {/*</div>*/}
-      
-      {/*connections*/}
-      
+
       <div className="lcars-list-2 uppercase">
         <ul>
           <li>Subspace Link: <span className="oc-almond-creme go-almond-creme">Established</span></li>
