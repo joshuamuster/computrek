@@ -10,7 +10,7 @@ const LessonItem = ({ id, title, project, subtitle, onClick }) => {
   };
   
   return (
-    <li id={id} onClick={handleClick}>
+    <li id={id} className="LessonItem" onClick={onClick}>
       {title} -
       <span className="go-tomato"> {project}</span>
       <span className="">{subtitle}</span>

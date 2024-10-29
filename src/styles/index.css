@@ -124,6 +124,10 @@ code {
   color: #fba;
 }
 
+.LessonItem {
+  cursor: pointer;
+}
+
 .LessonGrid {
   display: flex;
   flex-wrap: wrap;
