@@ -41,7 +41,7 @@ const MainNav = ({ handleResourceChange, resetMainContent }) => {
       </div>
 
       <div className="pill" id="LessonLink">
-        <a href="#" onClick={handleLessonsClick}>Academy Curriculum</a>
+        <a href="#" onClick={handleLessonsClick}>Academy Course</a>
       </div>
 
       <div className="lcars-frame" style={{marginTop: '20px'}}>

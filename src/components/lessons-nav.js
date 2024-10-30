@@ -1,13 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../assets/lcars-ultra-classic.css';
 import '../assets/lcars-colors.css';
 import '../assets/lcars.js';
-import {playButtonSound01} from '../soundEffects';
+import { playButtonSound01 } from '../soundEffects';
+import ErrorMessage from '../Error';
 
 const LessonsNav = ({ currentDeck, handleResourceChange }) => {
+  const [showError, setShowError] = useState(false);
+
   const handleClick = (e, panel) => {
     playButtonSound01(); // Play the sound
     handleResourceChange(e, panel); // Call the passed handleResourceChange handler
+
+    // Check if the URI contains a '#' symbol
+    if (!window.location.hash.includes('#')) {
+      setShowError(true);
+    } else {
+      setShowError(false);
+    }
   };
 
   return (
@@ -33,7 +43,7 @@ const LessonsNav = ({ currentDeck, handleResourceChange }) => {
             <div key={i} className={`bar-${i + 6}`}></div>
           ))}
         </div>
-        {React.createElement(currentDeck)}
+        {showError ? <ErrorMessage /> : React.createElement(currentDeck)}
       </div>
     </div>
   );

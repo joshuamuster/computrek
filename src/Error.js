@@ -1,7 +1,7 @@
 import React from 'react';
-import '../assets/lcars-ultra-classic.css';
-import '../assets/lcars-colors.css';
-import '../assets/lcars.js';
+import './assets/lcars-ultra-classic.css';
+import './assets/lcars-colors.css';
+import './assets/lcars.js';
 
 const ErrorMessage = () => {
   return (
