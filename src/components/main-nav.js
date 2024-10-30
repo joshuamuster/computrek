@@ -41,7 +41,7 @@ const MainNav = ({ handleResourceChange, resetMainContent }) => {
       </div>
 
       <div className="pill" id="LessonLink">
-        <a href="#" onClick={handleLessonsClick}>Lessons</a>
+        <a href="#" onClick={handleLessonsClick}>Academy Curriculum</a>
       </div>
 
       <div className="lcars-frame" style={{marginTop: '20px'}}>
@@ -63,17 +63,17 @@ const MainNav = ({ handleResourceChange, resetMainContent }) => {
       </div>
 
       <br/>
-      <div className="pill" style={{marginBottom: '20px'}} id="LessonLink"><a href="#" onClick={handleLessonsClick}>CONVERSATION LEVEL</a>
+      <div className="pill" style={{marginBottom: '10px'}} id="LessonLink"><a href="#" onClick={handleLessonsClick}>CONVERSATION LEVEL (WIP)</a>
       </div>
-      <div className="pill" style={{marginBottom: '20px'}} id="LessonLink"><a href="#" onClick={handleLessonsClick}>HELP</a>
+      <div className="pill" style={{marginBottom: '10px'}} id="LessonLink"><a href="#" onClick={handleLessonsClick}>HELP (WIP)</a>
       </div>
-      <div className="pill" style={{marginBottom: '20px'}} id="LessonLink"><a href="#" onClick={handleLessonsClick}>ACTIVITY</a>
+      <div className="pill" style={{marginBottom: '10px'}} id="LessonLink"><a href="#" onClick={handleLessonsClick}>ACTIVITY (WIP)</a>
       </div>
-      <div className="pill" style={{marginBottom: '20px'}} id="LessonLink"><a href="#" onClick={handleLessonsClick}>MOVEMENT</a>
+      <div className="pill" style={{marginBottom: '10px'}} id="LessonLink"><a href="#" onClick={handleLessonsClick}>MOVEMENT (WIP)</a>
       </div>
-      <div className="pill" style={{marginBottom: '20px'}} id="LessonLink"><a href="#" onClick={handleLessonsClick}>PARTICIPATION</a>
+      <div className="pill" style={{marginBottom: '10px'}} id="LessonLink"><a href="#" onClick={handleLessonsClick}>PARTICIPATION (WIP)</a>
       </div>
-      <div className="pill" style={{marginBottom: '20px'}} id="LessonLink"><a href="#" onClick={handleLessonsClick}>SUCCESS</a>
+      <div className="pill" style={{marginBottom: '10px'}} id="LessonLink"><a href="#" onClick={handleLessonsClick}>SUCCESS (WIP)</a>
       </div>
 
       <div className="lcars-list-2 uppercase">

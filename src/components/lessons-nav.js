@@ -4,7 +4,7 @@ import '../assets/lcars-colors.css';
 import '../assets/lcars.js';
 import {playButtonSound01} from '../soundEffects';
 
-const SubNav = ({ currentDeck, handleResourceChange }) => {
+const LessonsNav = ({ currentDeck, handleResourceChange }) => {
   const handleClick = (e, panel) => {
     playButtonSound01(); // Play the sound
     handleResourceChange(e, panel); // Call the passed handleResourceChange handler
@@ -14,7 +14,7 @@ const SubNav = ({ currentDeck, handleResourceChange }) => {
     <div className="wrap" id="gap">
       <div className="left-frame">
         <div id="ResourceButtons">
-          {['Handout', 'Activity Guide', 'Slideshow', 'Code Studio', 'Videos', 'Other', 'Welcome'].map((panel, i) => (
+          {['Lesson', 'Activity Guide', 'Slideshow', 'Code Studio', 'Videos', 'Other', 'Welcome'].map((panel, i) => (
             <div
               key={i}
               id={`panel-${i + 3}`}
@@ -39,4 +39,4 @@ const SubNav = ({ currentDeck, handleResourceChange }) => {
   );
 };
 
-export default SubNav;
+export default LessonsNav;

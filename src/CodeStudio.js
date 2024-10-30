@@ -6,7 +6,8 @@ import './assets/lcars.js';
 const CodeStudio = () => {
 	return (
 		<main>
-			<h1>CodeStudio</h1>
+			<h1>Code Studio</h1>
+			<p>This will be screenshots and more in-depth explanations of the Code.org portion of the lesson.</p>
 		</main>
 	);
 };

@@ -7,6 +7,7 @@ const Videos = () => {
 	return (
 		<main>
 			<h1>Videos</h1>
+			<p>This will be embedded copies of whatever instructional videos go along with the lesson.</p>
 		</main>
 	);
 };

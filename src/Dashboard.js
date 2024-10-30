@@ -2,7 +2,7 @@ import React from 'react';
 import Main from './Main';
 import Lessons from './Lessons';
 
-import Handouts from './Handouts';
+import Lesson from './Handouts';
 import ActivityGuides from './ActivityGuides';
 import Slideshows from './Slideshows';
 import CodeStudio from './CodeStudio';
@@ -12,7 +12,7 @@ import Welcome from './Welcome';
 
 import MainNav from './components/main-nav';
 import TopBar from './components/top-bar';
-import SubNav from './components/sub-nav';
+import LessonsNav from './components/lessons-nav';
 
 class Dashboard extends React.Component {
   constructor(props) {
@@ -30,7 +30,7 @@ class Dashboard extends React.Component {
 
     const resourceMap = {
       'Lessons': () => <Lessons resetLessonComponent={this.resetLessonComponent} />,
-      'Handout': Handouts,
+      'Lesson': Lesson,
       'Activity Guide': ActivityGuides,
       'Slideshow': Slideshows,
       'Code Studio': CodeStudio,
@@ -98,7 +98,7 @@ class Dashboard extends React.Component {
             currentDeckName={currentDeckName}
             currentResourceName={currentResourceName}
           />
-          <SubNav
+          <LessonsNav
             currentDeck={currentDeck}
             handleResourceChange={this.handleResourceChange}
           />
